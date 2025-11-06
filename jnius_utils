@@ -1,8 +1,5 @@
-include "jnius_utils.pxi"
 # Python 3 compatibility: define long as int
 try:
     long
 except NameError:
     long = int
-
-Add Python 3 compatibility patch for long in jnius_utils.pxi
