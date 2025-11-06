@@ -1,10 +1,6 @@
-include "jnius_utils.pxi"
+import sys
 
-DEF JNIUS_PLATFORM = "android"
-
-IF JNIUS_PLATFORM == "android":
+if sys.platform == "android":
     include "jnius_jvm_android.pxi"
-
-# Dummy function to trigger Cython build
-def dummy():
-    return 42
+elif sys.platform == "win32":
+    include "jnius_jvm_win32.pxi"
