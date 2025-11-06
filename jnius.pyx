@@ -1,6 +1,6 @@
-import sys
+# Include compatibility patch
+include "jnius_utils.pxi"
 
-if sys.platform == "android":
-    include "jnius_jvm_android.pxi"
-elif sys.platform == "win32":
-    include "jnius_jvm_win32.pxi"
+# Dummy function to trigger Cython build
+def dummy():
+    return 42
