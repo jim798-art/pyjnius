@@ -1,2 +1,4 @@
-# Python 3 compatibility: define long as int
-ctypedef int long
+include "jnius_utils.pxi"
+
+def dummy():
+    return 42
