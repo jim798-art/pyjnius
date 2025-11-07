@@ -1,0 +1,1 @@
+ctypedef int long
